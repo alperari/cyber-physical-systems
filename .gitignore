@@ -1,2 +1,3 @@
 **/.direnv
 .vscode/
+.DS_Store
