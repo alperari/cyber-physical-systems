@@ -27,7 +27,7 @@ digraph {
     p1q0 -> p0q1 [label=a]
     p1q1 -> p1q2 [label=b]
     p1q2 -> p1q2 [label=b]
-    p1q2 -> p0q2 [label=b]
+    p1q2 -> p0q2 [label=a]
 }
 ```]
 
