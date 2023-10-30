@@ -6,6 +6,31 @@
 - Group 3: c
 - Group 4: f
 
+= Exercise 2
+#raw-render()[```dot
+digraph {
+    rankdir=LR;
+    p0q0 [shape=circle]
+    p0q1 [shape=circle]
+    p0q2 [shape=square, width=0.75]
+    p1q0 [shape=circle]
+    p1q1 [shape=circle]
+    p1q2 [shape=circle]
+    p0q0 -> p0q0 [label=b]
+    p0q0 -> p1q0 [label=a]
+    p0q0 -> p1q1 [label=a]
+    p0q1 -> p0q2 [label=b]
+    p0q2 -> p0q2 [label=b]
+    p0q2 -> p1q2 [label=a]
+    p1q0 -> p0q0 [label=a]
+    p1q0 -> p1q0 [label=b]
+    p1q0 -> p0q1 [label=a]
+    p1q1 -> p1q2 [label=b]
+    p1q2 -> p1q2 [label=b]
+    p1q2 -> p0q2 [label=b]
+}
+```]
+
 = Exercise 3
 == Language $L_1$
 === Part A
@@ -18,7 +43,7 @@ L_1 = {
 }
 $
 === Part B
-#raw-render(height: 10em)[```dot
+#raw-render()[```dot
 digraph {
     rankdir=LR;
     q0 [shape=circle]
@@ -42,7 +67,7 @@ L_2 = {
 }
 $
 === Part B
-#raw-render(height: 10em)[```dot
+#raw-render()[```dot
 digraph {
     rankdir=LR;
     q0 [shape=square]
