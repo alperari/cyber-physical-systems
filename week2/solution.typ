@@ -55,7 +55,19 @@ digraph {
 }
 ```]
 === Part C
-TODO
+$
+L_1 = (Q_1, sum, delta_1, Q_1^"init", F_1) \
+Q_1 = {q_0, q_1} \
+sum = {a, b} \
+Q_1^"init" = {q_0} \
+F_1 = {q_1} \
+delta_1 = {
+    (q_0, a, q_0),
+    (q_0, b, q_0),
+    (q_0, b, q_1),
+    (q_1, b, q_1)
+}
+$
 
 == Language $L_2$
 === Part A
@@ -78,4 +90,15 @@ digraph {
 }
 ```]
 === Part C
-TODO
+$
+L_2 = (Q_2, sum, delta_2, Q_2^"init", F_2) \
+Q_2 = {q_0, q_1} \
+sum = {a, b} \
+Q_2^"init" = {q_0} \
+F_2 = {q_2} \
+delta_1 = {
+    (q_0, a, q_1),
+    (q_0, b, q_1),
+    (q_1, b, q_0)
+}
+$
