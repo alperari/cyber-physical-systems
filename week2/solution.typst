@@ -1,0 +1,56 @@
+#import "@preview/diagraph:0.1.0": *
+
+= Exercise 1
+- Group 1: a, d, g, i, j, k
+- Group 2: b, e, h
+- Group 3: c
+- Group 4: f
+
+= Exercise 2
+== Language $L_1$
+=== Part A
+$
+L_1 = {
+    x_0x_1... |
+    (forall i in N_0 space . space x_i in sum)
+    and 
+    (exists i in N_0 space . space x_i = a)
+}
+$
+=== Part B
+#raw-render(height: 10em)[```dot
+digraph {
+    rankdir=LR;
+    q0 [shape=circle]
+    q1 [shape=square]
+    start -> q0
+    q0 -> q0 [label="a, b"]
+    q0 -> q1 [label=b]
+    q1 -> q1 [label=b]
+}
+```]
+=== Part C
+TODO
+
+== Language $L_2$
+=== Part A
+$
+L_2 = {
+    x_0 x_1 ... | 
+    (forall i in N_0 space . space x_i in sum)and 
+    (forall i in N_0 space . space i mod 2 eq 1 space . space x_i = a)
+}
+$
+=== Part B
+#raw-render(height: 10em)[```dot
+digraph {
+    rankdir=LR;
+    q0 [shape=square]
+    q1 [shape=circle]
+    start -> q0
+    q0 -> q1 [label="a, b"]
+    q1 -> q0 [label=a]
+}
+```]
+=== Part C
+TODO
