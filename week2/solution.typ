@@ -1,10 +1,8 @@
 #import "@preview/diagraph:0.1.0": *
 
 = Exercise 1
-- Group 1: a, d, g, i, j, k
-- Group 2: b, e, h
-- Group 3: c
-- Group 4: f
+- Group 1: a, c, d, g, i, j, k
+- Group 2: b, e, f, h
 
 = Exercise 2
 #raw-render()[```dot
@@ -37,7 +35,7 @@ digraph {
 $
 L_1 = {
     x_0x_1... |
-    (forall i in N_0 space . space x_i in sum)
+    (forall^infinity i in N_0 space . space x_i in sum)
     and 
     (exists i in N_0 space . space x_i = a)
 }
@@ -75,7 +73,7 @@ $
 L_2 = {
     x_0 x_1 ... | 
     (forall i in N_0 space . space x_i in sum)and 
-    (forall i in N_0 space . space i mod 2 eq 1 space . space x_i = a)
+    (forall^infinity i in N_0 space . space i mod 2 eq 1 space . space x_i = a)
 }
 $
 === Part B
@@ -95,10 +93,10 @@ L_2 = (Q_2, sum, delta_2, Q_2^"init", F_2) \
 Q_2 = {q_0, q_1} \
 sum = {a, b} \
 Q_2^"init" = {q_0} \
-F_2 = {q_2} \
-delta_1 = {
+F_2 = {q_0} \
+delta_2 = {
     (q_0, a, q_1),
     (q_0, b, q_1),
-    (q_1, b, q_0)
+    (q_1, a, q_0)
 }
 $
