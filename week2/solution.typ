@@ -95,7 +95,7 @@ L_2 = (Q_2, sum, delta_2, Q_2^"init", F_2) \
 Q_2 = {q_0, q_1} \
 sum = {a, b} \
 Q_2^"init" = {q_0} \
-F_2 = {q_2} \
+F_2 = {q_1} \
 delta_1 = {
     (q_0, a, q_1),
     (q_0, b, q_1),
