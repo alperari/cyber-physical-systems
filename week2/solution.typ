@@ -5,31 +5,35 @@
 - Group 2: b, e, f, h
 
 = Exercise 2
-#raw-render(height: 10em)[```dot
-digraph {
-    rankdir=LR;
-    start [style = invis, width = 0.01, fixedsize = true];
-    p0q0 [shape=circle]
-    p0q1 [shape=circle]
-    p0q2 [shape=square, width=0.75]
-    p1q0 [shape=circle]
-    p1q1 [shape=circle]
-    p1q2 [shape=circle]
-    start -> p0q0
-    p0q0 -> p0q0 [label=b]
-    p0q0 -> p1q0 [label=a]
-    p0q0 -> p1q1 [label=a]
-    p0q1 -> p0q2 [label=b]
-    p0q2 -> p0q2 [label=b]
-    p0q2 -> p1q2 [label=a]
-    p1q0 -> p0q0 [label=a]
-    p1q0 -> p1q0 [label=b]
-    p1q0 -> p0q1 [label=a]
-    p1q1 -> p1q2 [label=b]
-    p1q2 -> p1q2 [label=b]
-    p1q2 -> p0q2 [label=a]
-}
-```]
+
+#align(
+    center,
+    raw-render(height: 10em)[```dot
+    digraph {
+        rankdir=LR;
+        start [style = invis, width = 0.01, fixedsize = true];
+        p0q0 [shape=circle]
+        p0q1 [shape=circle]
+        p0q2 [shape=square, width=0.75]
+        p1q0 [shape=circle]
+        p1q1 [shape=circle]
+        p1q2 [shape=circle]
+        start -> p0q0
+        p0q0 -> p0q0 [label=b]
+        p0q0 -> p1q0 [label=a]
+        p0q0 -> p1q1 [label=a]
+        p0q1 -> p0q2 [label=b]
+        p0q2 -> p0q2 [label=b]
+        p0q2 -> p1q2 [label=a]
+        p1q0 -> p0q0 [label=a]
+        p1q0 -> p1q0 [label=b]
+        p1q0 -> p0q1 [label=a]
+        p1q1 -> p1q2 [label=b]
+        p1q2 -> p1q2 [label=b]
+        p1q2 -> p0q2 [label=a]
+    }
+    ```],
+)
 
 = Exercise 3
 == Language $L_1$
@@ -43,18 +47,21 @@ L_1 = {
 }
 $
 === Part B
-#raw-render(height: 10em)[```dot
-digraph {
-    rankdir=LR;
-    start [style = invis, width = 0.01, fixedsize = true];
-    q0 [shape=circle]
-    q1 [shape=square]
-    start -> q0
-    q0 -> q0 [label="a, b"]
-    q0 -> q1 [label=b]
-    q1 -> q1 [label=b]
-}
-```]
+#align(
+    center,
+    raw-render(height: 10em)[```dot
+    digraph {
+        rankdir=LR;
+        start [style = invis, width = 0.01, fixedsize = true];
+        q0 [shape=circle]
+        q1 [shape=square]
+        start -> q0
+        q0 -> q0 [label="a, b"]
+        q0 -> q1 [label=b]
+        q1 -> q1 [label=b]
+    }
+    ```],
+)
 === Part C
 $
 L_1 = (Q_1, sum, delta_1, Q_1^"init", F_1) \
@@ -80,17 +87,20 @@ L_2 = {
 }
 $
 === Part B
-#raw-render(height: 10em)[```dot
-digraph {
-    rankdir=LR;
-    start [style = invis, width = 0.01, fixedsize = true];
-    q0 [shape=square]
-    q1 [shape=circle]
-    start -> q0
-    q0 -> q1 [label="a, b"]
-    q1 -> q0 [label=a]
-}
-```]
+#align(
+    center,
+    raw-render(height: 10em)[```dot
+    digraph {
+        rankdir=LR;
+        start [style = invis, width = 0.01, fixedsize = true];
+        q0 [shape=square]
+        q1 [shape=circle]
+        start -> q0
+        q0 -> q1 [label="a, b"]
+        q1 -> q0 [label=a]
+    }
+    ```],
+)
 === Part C
 $
 L_2 = (Q_2, sum, delta_2, Q_2^"init", F_2) \
