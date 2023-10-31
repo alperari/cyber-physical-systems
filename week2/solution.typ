@@ -5,15 +5,17 @@
 - Group 2: b, e, f, h
 
 = Exercise 2
-#raw-render()[```dot
+#raw-render(height: 10em)[```dot
 digraph {
     rankdir=LR;
+    start [style = invis, width = 0.01, fixedsize = true];
     p0q0 [shape=circle]
     p0q1 [shape=circle]
     p0q2 [shape=square, width=0.75]
     p1q0 [shape=circle]
     p1q1 [shape=circle]
     p1q2 [shape=circle]
+    start -> p0q0
     p0q0 -> p0q0 [label=b]
     p0q0 -> p1q0 [label=a]
     p0q0 -> p1q1 [label=a]
@@ -41,9 +43,10 @@ L_1 = {
 }
 $
 === Part B
-#raw-render()[```dot
+#raw-render(height: 10em)[```dot
 digraph {
     rankdir=LR;
+    start [style = invis, width = 0.01, fixedsize = true];
     q0 [shape=circle]
     q1 [shape=square]
     start -> q0
@@ -77,9 +80,10 @@ L_2 = {
 }
 $
 === Part B
-#raw-render()[```dot
+#raw-render(height: 10em)[```dot
 digraph {
     rankdir=LR;
+    start [style = invis, width = 0.01, fixedsize = true];
     q0 [shape=square]
     q1 [shape=circle]
     start -> q0
