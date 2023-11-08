@@ -110,8 +110,26 @@ Cyber Physical Systems - Discrete Models \\
     \item{
         $L_1$: It is certain that \textit{a} is not infinite. However, \textit{b} can be infinite.\\
         $L_2$: It is certain that if there is \textit{b} at any position, regardless of finite or infinite words, there must be \textit{a} right next to it. However, \textit{a} can be infinite. Yet, \textit{b} can also be infinite as long as it follows \textit{a}, which means both are infinite only if they are together.\\
-        $L_1 \bigcap L_2$: $\emptyset$ (It is certain that \textit{a} is not infinite. And \textit{b} cannot be infinite since \textit{a} is not infinite)
+        $L_1 \bigcap L_2$: $\emptyset$ (It is certain that \textit{a} is not infinite. And \textit{b} cannot be infinite since \textit{a} is not infinite) \\
+        Since there is no infinite run containing an accepting state on the Büchi Automaton, the intersection is an empty language.
     }
+    \begin{figure}[ht] % ’ht’ tells LaTeX to place the figure ’here’ or at the top of the page
+        \centering % centers the figure
+        \begin{tikzpicture}
+            \node[state, initial] (q0q0_1) {$q_0, q_0, 1$};
+            \node[state, accepting, right of=q0q0_1] (q0q1_1) {$q_0, q_1, 1$};
+            \node[state, accepting, below of=q0q1_1] (q1q1_1) {$q_1, q_1, 1$};
+            \node[state, accepting, below of=q0q0_1] (q1q0_1) {$q_1, q_0, 1$};
+            \node[state, below of=q1q1_1] (q1q1_2) {$q_1, q_1, 2$};
+            
+            \draw (q0q0_1) edge[loop above] node {\tt a,b} (q0q0_1);
+            \draw (q0q0_1) edge[bend left] node {\tt b} (q0q1_1);
+            \draw (q0q0_1) edge[bend left] node {\tt b} (q1q1_1);
+            \draw (q1q0_1) edge[bend left] node {\tt b} (q1q1_2);
+        \end{tikzpicture}
+        \caption{Büchi automaton A that accepts intersection of $L_1$ and $L_2$ }
+        \label{fig:state-machine-l1}
+    \end{figure}
     
 \end{enumerate}
 
