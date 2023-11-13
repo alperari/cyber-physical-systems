@@ -281,7 +281,7 @@ digraph {
     L13L22x2r2r6 [label="L13, L22 \n x = 2 \n r1 = 2, r2 = 6", shape=circle];
     L13L22x2r2r3 [label="L13, L22 \n x = 2 \n r1 = 2, r2 = 3", shape=circle];
     L12L23x3r2r3 [label="L12, L23 \n x = 3 \n r1 = 2, r2 = 3", shape=circle];
-    L12L23x3r4r3 [label="L12, L23 \n x = 3 \n r1 = 0, r2 = 3", shape=circle];
+    L12L23x3r4r3 [label="L12, L23 \n x = 3 \n r1 = 4, r2 = 3", shape=circle];
     L13L23x6r2r6 [label="L13, L23 \n x = 6 \n r1 = 2, r2 = 6", shape=circle];
     L13L23x3r2r3 [label="L13, L23 \n x = 3 \n r1 = 2, r2 = 3", shape=circle];
     L13L23r2r2r3 [label="L13, L23 \n x = 2 \n r1 = 2, r2 = 3", shape=circle];
