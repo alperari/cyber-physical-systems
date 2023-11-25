@@ -51,3 +51,45 @@
   & bullet T_5 : {A_0 A_1 A_2 ... | forall i in N space . space a in.not A_i} \
   $
 )
+
+= Exercise 2: Starvation Freedom
+== Part A #label("2-part-a")
+We can prove that $"LIVE"' subset.eq "LIVE"$ if we can show that all worlds in $"LIVE"'$ is also in $"LIVE"$.
+
+Let $w in "LIVE"'$, we have the following cases:
+
+Case 1: $w$ doesn't have infinitely many $"wait"_1$s
+
+In this case $w in "LIVE"$ since $w$ doesn't satisfy the predicate $limits(exists)^infinity in N space . space "wait"_1 in A_i$, therefore doesn't need to satisfy $limits(exists)^infinity in N space . space "crit"_1 in A_i$.
+
+Case 2: $w$ has infinitely many $"wait"_1$s
+
+In this case, it follows that $w$ also has infinitely many $"crit"_1$s as well, because for all $"wait"_1 in A_i$ there must be a $"crit"_1 in A_j$ such that $j$ comes after $i$. There can't be a "last" $j$ that comes after all $"wait"_1$s, since there are infinitely many $"wait"_1$s. Which would mean that $"crit"_1$s can be finitely many in this case. Since this is not possible, we can conclude that $w in "LIVE"$. 
+
+Same reasoning can be trivially applied to $"wait"_2$ and $"crit"_2$ as well.
+
+$qed$
+
+== Part B
+Consider a language $"LIVE"''$ s.t.:
+#block(
+  $
+  "LIVE"'' := cases(
+    "set" "of" "all" "infinite" "traces" A_0 A_1 A_2 ... s.t. \
+    forall i in N space . space (
+      "wait"_1 in A_i -> exists j in N space . space j < i and "crit"_1 in A_j
+    ) \
+    forall i in N space . space (
+      "wait"_2 in A_i -> exists j in N space . space j < i and "crit"_2 in A_j
+    ) \
+  )
+  $
+)
+
+We can follow a similar proof to the #link(label("2-part-a"))[Part A] to conclude $"LIVE"'' subset.eq "LIVE"$. But $"LIVE"'' subset.eq.not "LIVE"'$ since ordering is reversed. Which means there is not necessarily a $"crit_1"$ after  each $"wait"_1$ (And same for $"crit"_2$ and $"wait"_2$). Therefore, $"LIVE"'$ is a _strictly stronger_ property than $"LIVE"$.
+
+== Part C
+No, because that system only enters $"crit"_i$ after a $"wait"_i$ is received. Therefore, ordering is always as described in $"LIVE"'$.
+
+== Part D
+No, because of #link(label("2-part-a"))[Part A], this is not a possible trace for any transition system.
