@@ -71,22 +71,7 @@ Same reasoning can be trivially applied to $"wait"_2$ and $"crit"_2$ as well.
 $qed$
 
 == Part B
-Consider a language $"LIVE"''$ s.t.:
-#block(
-  $
-  "LIVE"'' := cases(
-    "set" "of" "all" "infinite" "traces" A_0 A_1 A_2 ... s.t. \
-    forall i in N space . space (
-      "wait"_1 in A_i -> exists j in N space . space j < i and "crit"_1 in A_j
-    ) \
-    forall i in N space . space (
-      "wait"_2 in A_i -> exists j in N space . space j < i and "crit"_2 in A_j
-    ) \
-  )
-  $
-)
-
-We can follow a similar proof to the #link(label("2-part-a"))[Part A] to conclude $"LIVE"'' subset.eq "LIVE"$. But $"LIVE"'' subset.eq.not "LIVE"'$ since ordering is reversed. Which means there is not necessarily a $"crit_1"$ after  each $"wait"_1$ (And same for $"crit"_2$ and $"wait"_2$). Therefore, $"LIVE"'$ is a _strictly stronger_ property than $"LIVE"$.
+Let $w = ("crit"_1 "wait"_1)^omega$, it's true that $w in "LIVE"$. But, $w in.not "LIVE"'$ since $"crit"_1$ doesn't follow a $"wait"_1$.
 
 == Part C
 No, because that system only enters $"crit"_i$ after a $"wait"_i$ is received. Therefore, ordering is always as described in $"LIVE"'$.
