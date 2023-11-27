@@ -176,8 +176,8 @@ Therefore, they are subset of each other.
 Both $tau_P_1$ and $tau_P_2$ has all the traces $tau_(P_(3a) bar.triple P_(3b))$ have so it satisfies the subset relation.
 
 #pad(left: 15pt)[
-  - ${x > 0}^omega$ : path $q_1^omega$
-  - ${x > 0}^n {x = 0}^omega$ : path $q_1^n q_2^omega$ where $n in N_(>0)$. 
+  - ${x > 0}^omega$
+  - ${x > 0}^n {x = 0}^omega$
 ]
 
 - $(tau_4, tau_P_1) = "true"$ and $(tau_4, tau_P_2) = "true"$
@@ -185,8 +185,8 @@ Both $tau_P_1$ and $tau_P_2$ has all the traces $tau_(P_(3a) bar.triple P_(3b))$
 Both $tau_P_1$ and $tau_P_2$ has all the traces $tau_4$ have so it satisfies the subset relation.
 
 #pad(left: 15pt)[
-  - ${x > 0}^omega$ : path $q_1^omega$
-  - ${x > 0}^n {x = 0}^omega$ : path $q_1^n q_2^omega$ where $n in N_(>0)$. 
+  - ${x > 0}^omega$
+  - ${x > 0}^n {x = 0}^omega$
 ]
 
 == Part C
