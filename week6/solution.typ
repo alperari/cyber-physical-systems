@@ -108,9 +108,9 @@ No, because of #link(label("2-part-a"))[Part A], this is not a possible trace fo
     start1 [style=invis, width=0, height=0, fixedsize=true];
     start2 [style=invis, width=0, height=0, fixedsize=true];
 
-    l0x_eq_0 [label="q0", xlabel="{x = 0}", shape=circle];
-    l0x_gt_0 [label="q1", xlabel="{x > 0}", shape=circle];
-    l1x_eq_0 [label="q2", xlabel="{x = 0}", shape=circle];
+    l0x_eq_0 [label="l_0\nx = 0", xlabel="{x = 0}", shape=circle];
+    l0x_gt_0 [label="l_0\nx > 0", xlabel="{x > 0}", shape=circle];
+    l1x_eq_0 [label="l_1\nx = 0", xlabel="{x = 0}", shape=circle];
 
     start1 -> l0x_eq_0;
     start2 -> l0x_gt_0;
@@ -131,9 +131,9 @@ No, because of #link(label("2-part-a"))[Part A], this is not a possible trace fo
     start1 [style=invis, width=0, height=0, fixedsize=true];
     start2 [style=invis, width=0, height=0, fixedsize=true];
 
-    l0x_eq_0 [label="q0", xlabel="{x = 0}", shape=circle];
-    l0x_gt_0 [label="q1", xlabel="{x > 0}", shape=circle];
-    l1x_eq_0 [label="q2", xlabel="{x = 0}", shape=circle];
+    l0x_eq_0 [label="l_0\nx = 0", xlabel="{x = 0}", shape=circle];
+    l0x_gt_0 [label="l_0\nx > 0", xlabel="{x > 0}", shape=circle];
+    l1x_eq_0 [label="l_1\nx = 0", xlabel="{x = 0}", shape=circle];
 
     start1 -> l0x_eq_0;
     start2 -> l0x_gt_0;
@@ -153,9 +153,9 @@ No, because of #link(label("2-part-a"))[Part A], this is not a possible trace fo
 
     start1 [style=invis, width=0, height=0, fixedsize=true];
 
-    l0l2x_gt_0 [label="q0", xlabel="{x > 0}", shape=circle];
-    l0l3_x_eq_0 [label="q1", xlabel="{x = 0}", shape=circle];
-    l1l3x_eq_0 [label="q2", xlabel="{x = 0}", shape=circle];
+    l0l2x_gt_0 [label="l_0 l_2\nx > 0", xlabel="{x > 0}", shape=circle];
+    l0l3_x_eq_0 [label="l_0 l_3\n x = 0", xlabel="{x = 0}", shape=circle];
+    l1l3x_eq_0 [label="l_1 l_3\n x = 0", xlabel="{x = 0}", shape=circle];
 
     start1 -> l0l2x_gt_0;
     l0l2x_gt_0 -> l0l2x_gt_0;
