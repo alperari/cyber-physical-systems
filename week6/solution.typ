@@ -71,7 +71,7 @@ Same reasoning can be trivially applied to $"wait"_2$ and $"crit"_2$ as well.
 $qed$
 
 == Part B
-Let $w = ("crit"_1 "wait"_1)^omega$, it's true that $w in "LIVE"$. But, $w in.not "LIVE"'$ since $"crit"_1$ doesn't follow a $"wait"_1$.
+Let $pi = {"wait"_1}emptyset^omega$. $p in "LIVE"$ because there is no infinite $"wait"_1$ which would require that there must be infinitely many $"crit"_1$s. However, $p in.not "LIVE"'$ because there is no $"crit"_1$ after the initial $"wait"_1$.
 
 == Part C
 No, because that system only enters $"crit"_i$ after a $"wait"_i$ is received. Therefore, ordering is always as described in $"LIVE"'$.
