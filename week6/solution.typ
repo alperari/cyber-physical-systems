@@ -54,7 +54,7 @@
 
 = Exercise 2: Starvation Freedom
 == Part A #label("2-part-a")
-We can prove that $"LIVE"' subset.eq "LIVE"$ if we can show that all worlds in $"LIVE"'$ is also in $"LIVE"$.
+We can prove that $"LIVE"' subset.eq "LIVE"$ if we can show that all words in $"LIVE"'$ is also in $"LIVE"$.
 
 Let $w in "LIVE"'$, we have the following cases:
 
