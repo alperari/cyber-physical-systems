@@ -77,7 +77,7 @@ Let $pi = {"wait"_1}emptyset^omega$. $p in "LIVE"$ because there is no infinite 
 No, because that system only enters $"crit"_i$ after a $"wait"_i$ is received. Therefore, ordering is always as described in $"LIVE"'$.
 
 == Part D
-No, because we proved that $"LIVE"' subset "LIVE"$ in #link(label("2-part-a"))[Part A], this is not a possible trace for any transition system.
+No, because we proved that $"LIVE"' subset.eq "LIVE"$ in #link(label("2-part-a"))[Part A], this is not a possible trace for any transition system.
 
 #pagebreak()
 
