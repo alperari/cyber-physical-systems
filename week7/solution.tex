@@ -107,7 +107,7 @@ Cyber Physical Systems - Discrete Models \\
     \begin{enumerate}[i]
         \item 
         $
-            \{ A_0 A_1 A_2 ... | \forall i \in \N \cdot b\in A_i \longrightarrow \exists j \in \N \cdot j<i \cdot a \in A_j \}
+            \{ A_0 A_1 A_2 ... | \forall i \in \N \cdot (b\in A_i \longrightarrow \exists j \in \N \cdot j \leq i \cdot a \in A_j) \}
         $
         \item 
         $
@@ -147,7 +147,7 @@ Cyber Physical Systems - Discrete Models \\
     \begin{enumerate}[i]
         \item 
         $
-            \{ A_0 A_1 A_2 ... |\exists i,j,k \in \N \cdot (a\in A_i \wedge a\in A_j \wedge a\in A_k) \wedge \forall z \in \N / \{i,j,k\} \cdot a\notin A_z \}
+            \{ A_0 A_1 A_2 ... |\exists i,j,k \in \N \cdot (a\in A_i \wedge a\in A_j \wedge a\in A_k) \wedge (\forall z \in \N / \{i,j,k\}) \wedge (i \neq j \neq k) \cdot a\notin A_z \}
         $
         \item 
         $
@@ -238,7 +238,7 @@ Cyber Physical Systems - Discrete Models \\
 \section*{Exercise 3: Invariant checking I}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=4in]{images/03.png}
+    \includegraphics[width=5in]{images/03.png}
     \label{fig:03}
 \end{figure}
 
