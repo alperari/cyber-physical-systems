@@ -132,8 +132,9 @@ Cyber Physical Systems - Discrete Models \\
     \item 
     \begin{equation*}
         \begin{split}
-            P_{\text{safe}}^{(3)} &= cl(P_3) = (2^{AP})^\omega = \{A_0 A_1 ... \in (2^{AP})^\omega | \hspace{3mm} |\{i \in \N | a \in A_i\}| \leq 3 \}\\
-            P_{\text{live}}^{(3)} &= \stackengine{\baselineskip}{\{A_0 A_1 ... \in (2^{AP})^\omega | \hspace{3mm} |\{i \in \N | a \in A_i\}| = 3 \} \bigcup}{\{A_0 A_1 ... \in (2^{AP})^\omega | \hspace{3mm} |\{i \in \N | a \in A_i\}| > 3 \}}{U}{r}{F}{F}{L}
+            P_{\text{safe}}^{(3)} &= cl(P_3) = \{A_0 A_1 ... \in (2^{AP})^\omega | \hspace{3mm} |\{i \in \N | a \in A_i\}| \leq 3 \}\\
+            P_{\text{live}}^{(3)} &= \stackengine{\baselineskip}{\{A_0 A_1 ... \in (2^{AP})^\omega | \hspace{3mm} |\{i \in \N | a \in A_i\}| = 3 \} \bigcup}{\{A_0 A_1 ... \in (2^{AP})^\omega | \hspace{3mm} |\{i \in \N | a \in A_i\}| > 3 \}}{U}{r}{F}{F}{L}\\
+            &= \{A_0 A_1 ... \in (2^{AP})^\omega | \hspace{3mm} |\{i \in \N | a \in A_i\}| \geq 3 \}
         \end{split}
     \end{equation*}
     
@@ -141,7 +142,8 @@ Cyber Physical Systems - Discrete Models \\
     \begin{equation*}
         \begin{split}
             P_{\text{safe}}^{(4)} &= cl(P4) = \{ A_0 A_1 ... \in (2^{AP})^\omega | a \in A_0 \}\\
-            P_{\text{live}}^{(4)} &=  \stackengine{\baselineskip}{\{ A_0 A_1 ... \in (2^{AP})^\omega | a \in A_0 \wedge \forall i \in \N \cdot \exists j \in \N \cdot (j>i \wedge a \in A_j) \} \hspace{2mm} \bigcup\hspace{2mm} }{\{ A_0 A_1 ... \in (2^{AP})^\omega | a \notin A_0 \}}{U}{r}{F}{F}{L}
+            P_{\text{live}}^{(4)} &=  \stackengine{\baselineskip}{\{ A_0 A_1 ... \in (2^{AP})^\omega | a \in A_0 \wedge \forall i \in \N \cdot \exists j \in \N \cdot (j>i \wedge a \in A_j) \} \hspace{2mm} \bigcup\hspace{2mm} }{\{ A_0 A_1 ... \in (2^{AP})^\omega | a \notin A_0 \}}{U}{r}{F}{F}{L} \\
+            &= \{ A_0 A_1 ... \in (2^{AP})^\omega | (a \in A_0 \wedge \forall i \in \N \cdot \exists j \in \N \cdot (j>i \wedge a \in A_j)) \vee (a \notin A_0) \}
         \end{split}
     \end{equation*}
     
