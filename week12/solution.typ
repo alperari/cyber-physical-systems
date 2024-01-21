@@ -84,11 +84,66 @@ $
 #pagebreak()
 
 == Exercise 4: Equivalence of LTL formulas
+Note: Atomic propositions of the Transition System are notated under the state name.
+
 - $square a and circle diamond a limits(eq.triple)^? square a = "true"$
-- $diamond a and circle square a limits(eq.triple)^? diamond a = "false"$. Counter example: ${a} {b}^omega$ satisfies $diamond a$ but not $circle square a$.
+
+- $diamond a and circle square a limits(eq.triple)^? diamond a = "false"$. Counter example TS:
+#raw-render()[```dot
+  digraph {
+    rankdir=LR;
+
+    node [fixedsize=true, width=0.75, height=0.75];
+
+    start [fixedsize=true; width=0, height=0, label=""];
+
+    s0 [label="s0\n{a}"];
+    s1 [label="s1\n{b}"];
+
+    start -> s0;
+    s0 -> s1;
+    s1 -> s1;
+  }
+```]
+satisfies $diamond a$ but not for $circle square a$
+
 - $square a -> diamond b limits(eq.triple)^? a union (b or not a) = "true"$.
-- $a union "false" limits(eq.triple)^? square a = "false"$. Counter example: ${a}^omega$ holds for $square a$ but not for $a union "false"$ because there isn't a step satisfying $"false"$.
-- $square circle b limits(eq.triple)^? square b = "false"$. Counter example: ${a}{b}^omega$ holds for $square circle b$ but not for $square b$.
+
+- $a union "false" limits(eq.triple)^? square a = "false"$. Counter example TS:
+#raw-render()[```dot
+  digraph {
+    rankdir=LR;
+
+    node [fixedsize=true, width=0.75, height=0.75];
+
+    start [fixedsize=true; width=0, height=0, label=""];
+
+    s0 [label="s0\n{a}"];
+
+    start -> s0;
+    s0 -> s0;
+  }
+```]
+satisfies $square a$ but not for $a union "false"$.
+
+- $square circle b limits(eq.triple)^? square b = "false"$. Counter example: 
+#raw-render()[```dot
+  digraph {
+    rankdir=LR;
+
+    node [fixedsize=true, width=0.75, height=0.75];
+
+    start [fixedsize=true; width=0, height=0, label=""];
+
+    s0 [label="s0\n{a}"];
+    s1 [label="s1\n{b}"];
+
+    start -> s0;
+    s0 -> s1;
+    s1 -> s1;
+  }
+```]
+satisfies $square circle b$ but not for $square b$.
 
 === Proofs
 ==== Proof 1: $square a and circle diamond a eq.triple square a$
