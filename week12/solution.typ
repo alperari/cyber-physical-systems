@@ -29,6 +29,9 @@
   January 21, 2023
 ]
 
+== Exercise 1: Lecture Evaluation
+We did the lecture evaluation.
+
 == Exercise 2: LTL Properties
 === (a)
 $
@@ -46,7 +49,7 @@ $
 & not phi_3 : tau = {a}{b}^omega \
 & not phi_4 : tau = {c}^omega \
 & not phi_5 : tau = ({b}{a})^omega \
-& not phi_1 : tau = {c}{a}^omega \
+& not phi_6 : tau = {c}{a}^omega \
 $
 === (c)
 Let $T$ be the Transition System
@@ -72,16 +75,36 @@ $
 &  {A_0 A_1 ... in (2^"AP")^omega | forall i in NN . space exists j >= i . space c in A_j} \
 $
 
+#pagebreak()
+
 == Exercise 3: Stating properties in LTL
 $
-& phi_a = not "Peter"."use" or not "Betsy"."use" \
-& phi_b = (diamond square not "Peter"."use") and (diamond square not "Betsy"."use")  \
-& phi_c = ("Peter"."request" -> diamond "Peter"."use") and ("Betsy"."request" -> diamond "Betsy"."use") \
-& phi_d = (square diamond "Peter"."request" -> square diamond "Peter"."use") and (square diamond "Betsy"."request" -> square diamond "Betsy"."use") \
-& phi_e = ("Peter.use" -> (not "Peter.use") union "Betsy.use") and ("Betsy.use" -> (not "Betsy.use") union "Peter.use") 
+phi_a = square (not "Peter"."use" or not "Betsy"."use") \
 $
-
-#pagebreak()
+The wording is ambiguous. "a user can print only for a finite amount of time" can be either interpreted as:
+1. For each time the user starts printing, user stops printing in a finite amount of time.
+2. Each user only prints finitely many times in total. 
+We choose the interepratation 1.  
+$
+phi_b =
+  & square ("Peter.use" -> diamond not "Peter.use") and \
+  & square ("Betsy.use" -> diamond not "Betsy.use") \
+$
+$
+phi_c = 
+  &square ("Peter"."request" -> diamond "Peter"."use") and \
+  &square("Betsy"."request" -> diamond "Betsy"."use") \
+$
+$
+phi_d = 
+  &(square ("Peter"."request" -> diamond not "Peter"."request")) and \ 
+  &(square ("Betsy"."request" -> diamond not "Betsy"."request")) \
+$
+$
+phi_e = 
+  &square ("Peter.use" -> (not "Peter.use") union "Betsy.use") and \ 
+  &square ("Betsy.use" -> (not "Betsy.use") union "Peter.use") 
+$
 
 == Exercise 4: Equivalence of LTL formulas
 Note: Atomic propositions of the Transition System are notated under the state name.

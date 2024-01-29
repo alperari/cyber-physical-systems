@@ -10,7 +10,7 @@
 
 #align(center, text(21pt)[
   *Cyber Physical Systems - Discrete Models \ 
-  Exercise Sheet 9 Solution*
+  Exercise Sheet 10 Solution*
 ])
 
 #grid(
