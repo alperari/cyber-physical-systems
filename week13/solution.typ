@@ -64,6 +64,8 @@ phi_5 = square ( \
 )
 $
 
+#pagebreak()
+
 == Exercise 2: From LTL to NBA
 === (a)
 #raw-render()[```dot
@@ -143,7 +145,7 @@ Then there exists a word $omega$ such that one of the two holds:
 
 Without loss of generality we will only consider the first case. The second case can be handled in the same way.
 
-Then there exists a Transition System $tau$ such that $"Traces"(tau) = {omega}$. It immediately follows that $"Traces"(omega) subset.eq "Words"(phi) and "Traces"(omega) subset.eq.not "Words"(psi)$. Which means $tau tack.double phi and tau tack.double.not psi$. So $not (forall tau : tau tack.double phi <=> tau tack.double psi)$ holds from the counter example we found.
+Then there exists a Transition System $tau$ such that $"Traces"(tau) = {omega}$. It immediately follows that $"Traces"(tau) subset.eq "Words"(phi) and "Traces"(tau) subset.eq.not "Words"(psi)$. Which means $tau tack.double phi and tau tack.double.not psi$. So $not (forall tau : tau tack.double phi <=> tau tack.double psi)$ holds from the counter example we found.
 
 Since $"Words"(phi) != "Words"(psi) -> not (forall tau : tau tack.double phi <=> tau tack.double psi)$, we conclude that $forall tau : tau tack.double phi <=> tau tack.double psi -> "Words"(phi) = "Words"(psi) space qed$
 
